@@ -1,0 +1,23 @@
+{
+  "name": "DataCorner - Ocean Data Science & Code",
+  "short_name": "DataCorner",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#020518",
+  "theme_color": "#03045e",
+  "description": "Ocean-themed data science, machine learning, and software development service portal with real-time chat and document management.",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

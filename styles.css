@@ -1,0 +1,126 @@
+/* Custom Fonts & Styling Variables */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --ocean-deep: #03045e;
+  --ocean-midnight: #023e8a;
+  --ocean-teal: #0077b6;
+  --ocean-cyan: #00b4d8;
+  --ocean-foam: #90e0ef;
+  --ocean-glow: #00f5d4;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: linear-gradient(135deg, #020518 0%, #03045e 40%, #001233 100%);
+  background-attachment: fixed;
+  color: #e0f2fe;
+}
+
+/* Glassmorphism Containers */
+.ocean-glass {
+  background: rgba(3, 4, 94, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.ocean-card {
+  background: rgba(2, 62, 138, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(144, 224, 239, 0.18);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ocean-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 245, 212, 0.4);
+  box-shadow: 0 12px 28px -6px rgba(0, 245, 212, 0.2);
+}
+
+/* Interactive Elements */
+.ocean-input {
+  background: rgba(2, 24, 62, 0.6);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  color: #f0f9ff;
+  border-radius: 0.75rem;
+  padding: 0.625rem 0.875rem;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.ocean-input:focus {
+  border-color: var(--ocean-glow);
+  box-shadow: 0 0 12px rgba(0, 245, 212, 0.3);
+  background: rgba(2, 24, 62, 0.85);
+}
+
+.ocean-btn {
+  background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
+  color: #ffffff;
+  border: 1px solid rgba(144, 224, 239, 0.4);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 180, 216, 0.3);
+}
+
+.ocean-btn:hover {
+  background: linear-gradient(135deg, #00b4d8 0%, #00f5d4 100%);
+  color: #03045e;
+  box-shadow: 0 6px 20px rgba(0, 245, 212, 0.5);
+  transform: translateY(-1px);
+}
+
+.ocean-btn:active {
+  transform: translateY(0);
+}
+
+/* Background Animated Waves */
+.ocean-wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230077b6' fill-opacity='0.12' d='M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,112C672,107,768,149,864,165.3C960,181,1056,171,1152,149.3C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(3, 4, 94, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 180, 216, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 245, 212, 0.7);
+}
+
+/* Tab Fade Animation */
+.animate-fade {
+  animation: fadeIn 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
